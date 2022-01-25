@@ -1,0 +1,23 @@
+﻿@model Vidly.ViewModels.RandomMovieViewModel;
+@{
+    ViewData["Title"] = "View";
+   
+}
+
+<h1>@Model.Movie.Name</h1>
+
+@if(Model.Customer.Count == 0)
+{
+    <p>There is nothing tio display at this time sir</p>
+}
+else
+{
+    @foreach (var Cust in Model.Customer)
+    {
+    <p>@Cust.Name</p>
+    }    
+}
+
+
+
+<p>Name : @ViewBag.movie.Name</p>
